@@ -2,7 +2,7 @@
 from bs4 import BeautifulSoup
 import requests
 import lxml
-# import html5lib
+
 
 
 
@@ -17,7 +17,7 @@ tracked_url_markup = tracked_url_markup.text
 url_soup = BeautifulSoup(tracked_url_markup, 'lxml')
 tracked_price = url_soup.find(class_="a-offscreen").text
 current_price = float(tracked_price.split("£")[1]) # should be number 92.48
-# tracked_price_2 = url_soup.find(class_="a-offscreen")
+
 
 print(current_price)
 # id tp_price_block_total_price_ww
